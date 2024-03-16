@@ -17,7 +17,7 @@ public class LoginTest {
 
     @Test
     public void testPageUpdatesToProjectPageAfterLogin() {
-        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
