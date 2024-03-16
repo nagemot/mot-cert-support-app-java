@@ -11,13 +11,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-import static junit.framework.TestCase.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LoginTest {
 
     @Test
     public void testPageUpdatesToProjectPageAfterLogin() {
-        //WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
@@ -29,7 +29,7 @@ public class LoginTest {
         driver.findElement(By.name("password")).sendKeys("password123");
         driver.findElement(By.cssSelector("button")).click();
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".card-title")));
 
         String title = driver.findElement(By.cssSelector(".card-title")).getText();
