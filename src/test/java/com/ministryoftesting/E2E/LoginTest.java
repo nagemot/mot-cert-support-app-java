@@ -25,14 +25,14 @@ public class LoginTest {
 
         driver.get("http://localhost:8080");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("email")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("email")));
 
         driver.findElement(By.name("email")).sendKeys("admin@test.com");
         driver.findElement(By.name("password")).sendKeys("password123");
         driver.findElement(By.cssSelector("button")).click();
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".card-title")));
+        WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait2.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".card-title")));
 
         String title = driver.findElement(By.cssSelector(".card-title")).getText();
 
