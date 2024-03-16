@@ -25,9 +25,6 @@ public class LoginTest {
 
         driver.get("http://localhost:8080");
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("email")));
-
         driver.findElement(By.name("email")).sendKeys("admin@test.com");
         driver.findElement(By.name("password")).sendKeys("password123");
         driver.findElement(By.cssSelector("button")).click();
