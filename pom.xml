@@ -52,7 +52,7 @@
                 <version>3.2.5</version>
                 <configuration>
                     <excludes>
-                        <exclude>**/e2e/**/**.java</exclude>
+                        <exclude>/Users/gregmckenna/Documents/GitHub/mot-cert-support-app-java/src/test/java/com/ministryoftesting/E2E/LoginTest.java</exclude>
                     </excludes>
                 </configuration>
             </plugin>
