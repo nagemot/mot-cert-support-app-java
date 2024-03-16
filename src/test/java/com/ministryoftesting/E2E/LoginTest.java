@@ -24,6 +24,8 @@ public class LoginTest {
         WebDriver driver = new ChromeDriver(options);
 
         driver.get("http://localhost:8080");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("email")));
 
         driver.findElement(By.name("email")).sendKeys("admin@test.com");
         driver.findElement(By.name("password")).sendKeys("password123");
