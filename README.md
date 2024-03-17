@@ -7,5 +7,11 @@ Automated checks exist for API tests.  This can be executed using mvn clean veri
 Running UI tests
 mvn test -Dtest=Logintest
 
+## CI/CD Integration
+
+The project is integrated with GITHUB actions.  The config file can be found at
+
+.github/workflows/build_test_maven.yml
+
 
 
